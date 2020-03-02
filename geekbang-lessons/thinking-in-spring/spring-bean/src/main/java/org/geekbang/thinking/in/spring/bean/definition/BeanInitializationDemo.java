@@ -50,7 +50,8 @@ public class BeanInitializationDemo {
         System.out.println("Spring 应用上下文已关闭...");
     }
 
-    //@Lazy 注册加上之后，它返回的对象实际上是一个代理 ，
+    //@Lazy 注册加上之后，它返回的对象实际上是一个代理
+
     // 当依赖注入完成时，实际的 Bean 还没有完成初始化，只有首次调用方法或字段时，才开始~
     @Bean(initMethod = "initUserFactory", destroyMethod = "doDestroy")
     @Lazy(value = false)
